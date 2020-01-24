@@ -1,7 +1,22 @@
-#########________________________________________##########################
+#########________________________________________##################################################
 
 This Directory I am going to try couple of things.
 Aim is to try and do something specific and Document problems i face and solutions i find
 
 0=) Specific Task 
+Make two folders. One folder will have function module files, another will store data
+outside both folders in this current directory, make a script that takes data from the data folder, uses functions of the second folder and outputs data into a new folder according to sub-directories.
+The Parent Folder where this text file resides should be independent of which system it is 
 
+1= )Working and Structure
+bin -  will have modules
+data - will have data
+out - output folder that we should create
+
+for drama lets do things iteratively for accesing data and giving out
+scan images and do equalise correction of seperate color channels from historgram folder to accomplish this
+run.py is wrapper script that uses functions from ./bin/module.py
+
+
++++++ case 1 +++++
+importing key librares that functions in module.py need in run.py before we import module.py in run.py
