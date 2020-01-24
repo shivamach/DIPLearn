@@ -57,6 +57,30 @@ def split_image_channels(image,show=0):
 		print("invalid second parameter")
 		print("enter either 0,1 or nothing")
 
+"""this is a very specific function made to be used in our boi kl project
+given aspect ratio and percent area of rectangle needed in center of frame
+the function returns a list of two tuples with start and end points of the 
+rectangle. 
+aspect ratio is w/h here
+default values for our stuff there"""
+
+def give_Box_atCenter(dim=(640,480), aspect_ratio=0.86, area_rate=0.384, about=None):
+	W = dim[0]
+	H = dim[1]
+	area = area_rate * W * H
+	w = int(math.sqrt(area * aspect_ratio))
+	h = int(area/w)
+	x = int(W/2 - w/2)
+	y = int(H/2 - h/2)
+	del W,H,area
+	delete()
+	return([x,y],[x+w,y+w])
+
+
+
+
+
+
 
 
 
