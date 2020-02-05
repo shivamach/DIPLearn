@@ -10,9 +10,11 @@ vs = VideoStream(src=0).start()
 
 while True:
 	frame = vs.read()
-	#frame = module.Equalise_ColChannels(frame)
+	frame = module.Equalise_ColChannels(frame)
 	cv2.imshow("frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 	# print("STAY STILL BOI")
 	if key == ord('q'):
 		break
+	for count in range(13):
+			
