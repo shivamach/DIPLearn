@@ -23,7 +23,7 @@ while True:
 	frame = vs.read()
 	image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	if choice == 0:
-		sobelX = cv2.Sobel(image, cv2.CqqV_64F, 1, 0)
+		sobelX = cv2.Sobel(image, cv2.CV_64F, 1, 0)
 		sobelY = cv2.Sobel(image, cv2.CV_64F, 0, 1)
 		sobelX = np.uint8(np.absolute(sobelX))
 		sobelY = np.uint8(np.absolute(sobelY))
