@@ -13,7 +13,7 @@ mask = imutils.resize(mask, width=500)
 image = cv2.imread(args["image"])
 image = imutils.resize(image, width=500)
 
-output = cv2.bitwise_or(image, image , mask=mask)
+output = cv2.bitwise_and(image, image , mask=mask)
 
 cv2.imshow("output", mask)
 cv2.waitKey(0)
