@@ -32,9 +32,9 @@ args = vars(ap.parse_args())
 
 img = cv2.imread(args["image"])
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-# img = imutils.resize(img, width=500)
+img = imutils.resize(img, width=500)
 # thresholding the image
-(thresh, img_bin) = cv2.threshold(img, 215, 255, cv2.THRESH_BINARY)
+(thresh, img_bin) = cv2.threshold(img, 210, 255, cv2.THRESH_BINARY)
 img_bin = 255-img_bin
 
 # detecting boxes using morphological operations
